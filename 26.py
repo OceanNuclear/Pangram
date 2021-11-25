@@ -43,7 +43,7 @@ def find_next_word_excluding_set(forbidden_letter_set, prepending_indices=[]):
                 yield new_indices
 
 if __name__=="__main__":
-    found_matches = []
+    found_matches = [] # a 2d list, storing the indices of the words in the sentence; each list of index will be sorted before storage to prevent duplication.
 
     for index_list in find_next_word_excluding_set(set()):
         if sorted(index_list) not in found_matches:
